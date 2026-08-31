@@ -1,35 +1,19 @@
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#ffe9f8,#e9f7ff);
-text-align:center;
-margin:0;
-padding:30px;
-color:#5b2d82;
-}
-.screen{display:none;max-width:900px;margin:auto;}
-.active{display:block;}
-#gift{
-font-size:120px;
-cursor:pointer;
-transition:.3s;
-}
-#gift:hover{transform:scale(1.15) rotate(8deg);}
-.card{
-background:white;
-border-radius:20px;
-padding:20px;
-margin:25px auto;
-box-shadow:0 6px 18px rgba(0,0,0,.15);
-max-width:650px;
-}
-button{
-background:#ff5fa2;
-color:white;
-border:none;
-padding:16px 28px;
-border-radius:999px;
-font-size:18px;
-cursor:pointer;
-}
-button:hover{transform:scale(1.05);}
-ul{text-align:left;display:inline-block;}
+
+body{margin:0;font-family:Trebuchet MS,Arial,sans-serif;color:white;text-align:center;overflow-x:hidden;
+background:linear-gradient(135deg,#ff4db8,#8a2be2,#3fa9ff);}
+.bg{position:fixed;inset:0;background:
+radial-gradient(circle at 20% 20%,rgba(255,255,255,.18),transparent 30%),
+radial-gradient(circle at 80% 30%,rgba(255,255,255,.15),transparent 25%);
+z-index:-1}
+.decor{padding:12px;font-size:1.4rem;letter-spacing:8px}
+.screen{display:none;padding:20px}.active{display:block}
+#gift{font-size:110px;cursor:pointer;transition:.3s}#gift:hover{transform:scale(1.1) rotate(8deg)}
+.puppies{font-size:2.2rem}
+.card{position:relative;max-width:650px;margin:22px auto;padding:22px;border-radius:28px;
+background:linear-gradient(180deg,#fff,#ffe7fb);color:#5b2d82;
+box-shadow:0 0 20px rgba(255,255,255,.4),0 0 40px rgba(255,0,200,.35)}
+.card:before{content:"✨ 🐾 💖";position:absolute;top:8px;left:14px}
+button{background:linear-gradient(90deg,#ff43b5,#6b4cff,#33c7ff);color:#fff;border:none;border-radius:999px;padding:14px 26px;font-size:18px;font-weight:bold;cursor:pointer}
+.banner{display:none;max-width:650px;margin:0 auto 18px;padding:14px;background:#fff;color:#d4007f;border-radius:20px;font-weight:bold}
+.ribbon{display:none;position:absolute;right:14px;top:14px;background:gold;color:#5b2d82;padding:6px 12px;border-radius:999px;font-weight:bold}
+.selected{border:5px solid gold}.disabled{opacity:.45}
