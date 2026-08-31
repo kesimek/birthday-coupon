@@ -1,61 +1,7 @@
-
-body {
-    font-family: "Baloo 2", system-ui, sans-serif;
-}
-h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-h2 {
-    font-weight: 700;
-}
-
-button {
-    font-family: "Baloo 2", sans-serif;
-    font-weight: 700;
-    font-size: 1.15rem;
-}
-
-.banner,
-.card,
-p {
-    font-weight: 500;
-}
-background:linear-gradient(135deg,#ff4db8,#8a2be2,#3fa9ff);}
-.bg{position:fixed;inset:0;background:
-radial-gradient(circle at 20% 20%,rgba(255,255,255,.18),transparent 30%),
-radial-gradient(circle at 80% 30%,rgba(255,255,255,.15),transparent 25%);
-z-index:-1}
-.decor{padding:12px;font-size:1.4rem;letter-spacing:8px}
-.screen{display:none;padding:20px}.active{display:block}
-#gift{font-size:110px;cursor:pointer;transition:.3s}#gift:hover{transform:scale(1.1) rotate(8deg)}
-.puppies{font-size:2.2rem}
-.card{position:relative;max-width:650px;margin:22px auto;padding:22px;border-radius:28px;
-background:linear-gradient(180deg,#fff,#ffe7fb);color:#5b2d82;
-box-shadow:0 0 20px rgba(255,255,255,.4),0 0 40px rgba(255,0,200,.35)}
-.card:before{content:"✨ 🐾 💖";position:absolute;top:8px;left:14px}
-button{background:linear-gradient(90deg,#ff43b5,#6b4cff,#33c7ff);color:#fff;border:none;border-radius:999px;padding:14px 26px;font-size:18px;font-weight:bold;cursor:pointer}
-.banner{display:none;max-width:650px;margin:0 auto 18px;padding:14px;background:#fff;color:#d4007f;border-radius:20px;font-weight:bold}
-.ribbon{display:none;position:absolute;right:14px;top:14px;background:gold;color:#5b2d82;padding:6px 12px;border-radius:999px;font-weight:bold}
-.selected{border:5px solid gold}.disabled{opacity:.45}
-:root{
-    --pink:#ff4fbf;
-    --purple:#8b5cf6;
-    --blue:#4ec5ff;
-    --yellow:#ffe66d;
-    --white:#ffffff;
-}
-h1{
-    background: linear-gradient(
-        90deg,
-        var(--pink),
-        var(--purple),
-        var(--blue)
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 3px 12px rgba(255,255,255,.35);
-}
+body{font-family:"Baloo 2",sans-serif;background:linear-gradient(135deg,#ff4fbf,#8b5cf6,#4ec5ff);color:#fff;text-align:center;margin:0}
+header{padding:20px;position:relative}.corner{position:absolute;width:110px;top:10px}.left{left:10px}.right{right:10px}.rainbow{width:220px}
+h1{font-weight:800;font-size:3rem}.hidden{display:none}.active{display:block}
+#gift{font-size:120px;cursor:pointer}.card{position:relative;background:#fff;color:#5b2d82;border-radius:28px;max-width:600px;margin:20px auto;padding:24px;box-shadow:0 0 30px rgba(255,255,255,.35)}
+.card img{width:70px}.selected{border:5px solid gold}.disabled{opacity:.45}.rib{display:none;position:absolute;right:15px;top:15px;background:gold;color:#5b2d82;padding:4px 10px;border-radius:20px;font-weight:700}
+button{font-family:"Baloo 2";font-size:1.1rem;background:linear-gradient(90deg,#ff4fbf,#8b5cf6,#4ec5ff);color:#fff;border:none;border-radius:999px;padding:12px 24px}
+#banner{display:none;background:#fff;color:#d4007f;margin:10px auto;padding:12px;border-radius:18px;max-width:600px;font-weight:700}

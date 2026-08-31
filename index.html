@@ -1,43 +1,14 @@
-<!doctype html><html><<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ellie's Birthday Adventure</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-</head><body>
-<div class="bg"></div>
-<div class="decor">🐾 ⭐ 💖 🌈 🐶 ✨ 🐾 ⭐ 💖 🌈</div>
-
-<section id="giftScreen" class="screen active">
-<h1>🎉 Happy 8th Birthday, Ellie! 🎉</h1>
-<div class="puppies">🐶 🌈 🐶</div>
-<div id="gift">🎁</div>
-<p>Tap the gift to unlock your Birthday Adventure!</p>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<title>Ellie's Birthday Adventure</title></head><body>
+<header><img class="corner left" src="assets/puppy-left.svg"><img class="corner right" src="assets/puppy-right.svg">
+<h1>Happy 8th Birthday, Ellie!</h1><img class="rainbow" src="assets/rainbow.svg"></header>
+<section id="giftScreen" class="active"><div id="gift">🎁</div><p>Tap the gift to unlock your Birthday Adventure!</p></section>
+<section id="choiceScreen" class="hidden"><div id="banner"></div>
+<div class="card" id="shop"><img src="assets/shopping-icon.svg"><h2>$30 Shopping Spree</h2><button id="shopBtn" onclick="choose('shop')">Choose Adventure</button><span id="shopRibbon" class="rib">✓ Selected</span></div>
+<div class="card" id="craft"><img src="assets/craft-icon.svg"><h2>Create Something Together</h2><button id="craftBtn" onclick="choose('craft')">Choose Adventure</button><span id="craftRibbon" class="rib">✓ Selected</span></div>
 </section>
-
-<section id="choiceScreen" class="screen">
-<div id="banner" class="banner"></div>
-
-<div id="shop" class="card">
-<div class="ribbon" id="shopRibbon">✓ Selected</div>
-<h2>🛍️ Shopping Spree</h2>
-<p>Pick anything you'd like (up to $30).</p>
-<button id="shopBtn" onclick="choose('shop')">Choose Adventure</button>
-</div>
-
-<div id="craft" class="card">
-<div class="ribbon" id="craftRibbon">✓ Selected</div>
-<h2>🎨 Create Something Together</h2>
-<p>Embroidery • 3D Prints • Shirts • Tumblers • Vinyl • Your own idea!</p>
-<button id="craftBtn" onclick="choose('craft')">Choose Adventure</button>
-</div>
-</section>
-
-<section id="doneScreen" class="screen">
-<h1>🎊 Adventure Confirmed! 🎊</h1>
-<h2 id="selection"></h2>
-<p>I can't wait to make something amazing with you! ❤️</p>
-<button onclick="back()">⬅ Back to Overview</button>
-</section>
-<script src="script.js"></script>
-</body></html>
+<section id="doneScreen" class="hidden"><h2 id="sel"></h2><button onclick="backView()">Back to Overview</button></section>
+<script src="script.js"></script></body></html>
