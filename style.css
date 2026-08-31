@@ -2,6 +2,27 @@
 body {
     font-family: "Baloo 2", system-ui, sans-serif;
 }
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+button {
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.banner,
+.card,
+p {
+    font-weight: 500;
+}
 background:linear-gradient(135deg,#ff4db8,#8a2be2,#3fa9ff);}
 .bg{position:fixed;inset:0;background:
 radial-gradient(circle at 20% 20%,rgba(255,255,255,.18),transparent 30%),
@@ -19,3 +40,22 @@ button{background:linear-gradient(90deg,#ff43b5,#6b4cff,#33c7ff);color:#fff;bord
 .banner{display:none;max-width:650px;margin:0 auto 18px;padding:14px;background:#fff;color:#d4007f;border-radius:20px;font-weight:bold}
 .ribbon{display:none;position:absolute;right:14px;top:14px;background:gold;color:#5b2d82;padding:6px 12px;border-radius:999px;font-weight:bold}
 .selected{border:5px solid gold}.disabled{opacity:.45}
+:root{
+    --pink:#ff4fbf;
+    --purple:#8b5cf6;
+    --blue:#4ec5ff;
+    --yellow:#ffe66d;
+    --white:#ffffff;
+}
+h1{
+    background: linear-gradient(
+        90deg,
+        var(--pink),
+        var(--purple),
+        var(--blue)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 3px 12px rgba(255,255,255,.35);
+}
