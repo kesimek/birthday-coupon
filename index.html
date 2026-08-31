@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 8th Birthday!</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+<div id="giftScreen" class="screen active">
+  <h1>🎉 Happy 8th Birthday! 🎉</h1>
+  <h2>You've unlocked a Birthday Adventure!</h2>
+
+  <div id="gift" title="Open Gift">
+      🎁
+  </div>
+
+  <p>Tap the gift to open your surprise!</p>
+</div>
+
+<div id="choiceScreen" class="screen">
+<h1>Choose ONE Birthday Adventure</h1>
+
+<div class="card">
+<h2>🛍️ $30 Shopping Spree</h2>
+<p>We'll go shopping together and you can choose anything you'd like (up to $30).</p>
+<button onclick="choose('Shopping Spree')">Choose This Adventure</button>
+</div>
+
+<div class="card">
+<h2>🎨 Create Something Custom</h2>
+<p>Let's make something amazing together!</p>
+<ul>
+<li>Embroidery</li>
+<li>3D Printing</li>
+<li>Custom T-Shirt</li>
+<li>Personalized Tumbler</li>
+<li>Vinyl Decals</li>
+<li>Or invent your own project!</li>
+</ul>
+<button onclick="choose('Custom Craft Project')">Choose This Adventure</button>
+</div>
+</div>
+
+<div id="doneScreen" class="screen">
+<h1>🎉 Congratulations! 🎉</h1>
+<h2 id="selection"></h2>
+<p>Your Birthday Adventure has been redeemed!</p>
+<p>I can't wait to spend time with you. ❤️</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
