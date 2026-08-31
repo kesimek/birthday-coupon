@@ -1,14 +1,42 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ellie's Birthday Adventure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-<title>Ellie's Birthday Adventure</title></head><body>
-<header><img class="corner left" src="assets/puppy-left.svg"><img class="corner right" src="assets/puppy-right.svg">
-<h1>Happy 8th Birthday, Ellie!</h1><img class="rainbow" src="assets/rainbow.svg"></header>
-<section id="giftScreen" class="active"><div id="gift">🎁</div><p>Tap the gift to unlock your Birthday Adventure!</p></section>
-<section id="choiceScreen" class="hidden"><div id="banner"></div>
-<div class="card" id="shop"><img src="assets/shopping-icon.svg"><h2>$30 Shopping Spree</h2><button id="shopBtn" onclick="choose('shop')">Choose Adventure</button><span id="shopRibbon" class="rib">✓ Selected</span></div>
-<div class="card" id="craft"><img src="assets/craft-icon.svg"><h2>Create Something Together</h2><button id="craftBtn" onclick="choose('craft')">Choose Adventure</button><span id="craftRibbon" class="rib">✓ Selected</span></div>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+<header>
+<img class="puppy left" src="assets/puppy-left.svg" alt="">
+<img class="puppy right" src="assets/puppy-right.svg" alt="">
+<img class="rainbow" src="assets/rainbow.svg" alt="">
+<h1>Happy 8th Birthday, Ellie!</h1>
+</header>
+
+<section id="giftScreen" class="active">
+<img id="gift" src="assets/gift.svg" alt="Gift">
+<p>Tap the gift to unlock your Birthday Adventure!</p>
 </section>
-<section id="doneScreen" class="hidden"><h2 id="sel"></h2><button onclick="backView()">Back to Overview</button></section>
-<script src="script.js"></script></body></html>
+
+<section id="choiceScreen" class="hidden">
+<div class="card"><img src="assets/shopping.svg"><h2>$30 Shopping Spree</h2><button onclick="finish('$30 Shopping Spree')">Choose</button></div>
+<div class="card"><img src="assets/craft.svg"><h2>Create Something Together</h2><button onclick="finish('Create Something Together')">Choose</button></div>
+</section>
+
+<section id="doneScreen" class="hidden">
+<h1>Adventure Confirmed!</h1>
+<h2 id="choice"></h2>
+<p>I can't wait to spend some special time with you and celebrate your birthday!</p>
+<h3>Have the BEST 8th Birthday, Ellie!</h3>
+<p><strong>Love,<br>Aunt Katie ❤️</strong></p>
+<div class="footer">
+<img src="assets/star.svg"><img src="assets/heart.svg"><img src="assets/pawprint.svg">
+</div>
+</section>
+<script src="script.js"></script>
+</body></html>
