@@ -1,10 +1,227 @@
-body{font-family:'Baloo 2',sans-serif;margin:0;padding:20px;text-align:center;color:#fff;background:linear-gradient(135deg,#ff4fbf,#8b5cf6,#4ec5ff);background-size:300% 300%;animation:bg 20s infinite;}
-@keyframes bg{50%{background-position:100% 50%}}
-.hidden{display:none}.active{display:block}
-.puppy{width:110px;position:absolute;top:10px}.left{left:10px}.right{right:10px}.rainbow{width:220px}
-#gift{width:180px;cursor:pointer;animation:bounce 2s infinite}
-@keyframes bounce{50%{transform:translateY(-8px)}}
-.card{background:#fff;color:#5b2d82;max-width:500px;margin:20px auto;padding:20px;border-radius:24px}
-.card img{width:72px}
-button{font-family:'Baloo 2';padding:12px 22px;border:none;border-radius:999px;background:#ff4fbf;color:#fff;cursor:pointer}
-.footer img{width:36px;margin:8px}
+:root{
+    --pink:#ff4fbf;
+    --purple:#8b5cf6;
+    --blue:#4ec5ff;
+    --yellow:#ffe66d;
+    --white:#ffffff;
+    --dark:#5b2d82;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Baloo 2",sans-serif;
+    color:white;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.18),
+            rgba(255,255,255,.18)
+        ),
+        url("assets/background.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.overlay{
+    min-height:100vh;
+    padding:30px 20px;
+    text-align:center;
+    backdrop-filter:blur(2px);
+}
+
+.screen{
+    display:none;
+    animation:fade .5s ease;
+}
+
+.screen.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+h1{
+    font-size:clamp(2.2rem,6vw,3.5rem);
+    margin-bottom:.3em;
+    line-height:1.1;
+    text-shadow:2px 2px 6px rgba(0,0,0,.25);
+}
+
+.subtitle{
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+.tap{
+    font-size:1.2rem;
+    margin-top:20px;
+}
+
+#gift{
+    width:min(220px,60vw);
+    cursor:pointer;
+    transition:transform .25s;
+    animation:bounce 2s infinite;
+}
+
+#gift:hover{
+    transform:scale(1.05);
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.cards{
+    display:grid;
+    gap:25px;
+    max-width:900px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    color:var(--dark);
+    border-radius:28px;
+    padding:28px;
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+}
+
+.card h2{
+    margin-top:10px;
+}
+
+.emoji{
+    font-size:3.5rem;
+}
+
+button{
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:14px 28px;
+
+    font-family:"Baloo 2",sans-serif;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            var(--purple),
+            var(--blue)
+        );
+
+    transition:.2s;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+
+}
+
+.message{
+
+    max-width:650px;
+
+    margin:20px auto;
+
+    font-size:1.2rem;
+
+    line-height:1.6;
+
+}
+
+.birthday{
+
+    color:var(--yellow);
+
+    text-shadow:2px 2px 8px rgba(0,0,0,.3);
+
+}
+
+.love{
+
+    font-size:1.5rem;
+
+    margin-top:40px;
+
+}
+
+.paw{
+
+    position:fixed;
+
+    width:70px;
+
+    opacity:.75;
+
+}
+
+.paw-left{
+
+    left:15px;
+
+    top:15px;
+
+}
+
+.paw-right{
+
+    right:15px;
+
+    top:15px;
+
+}
+
+.paw-bottom{
+
+    width:70px;
+
+    margin-top:25px;
+
+}
+
+@media (min-width:700px){
+
+    .cards{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}

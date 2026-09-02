@@ -1,42 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ellie's Birthday Adventure</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellie's Birthday Adventure</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
+
 <body>
-<header>
-<img class="puppy left" src="assets/puppy-left.svg" alt="">
-<img class="puppy right" src="assets/puppy-right.svg" alt="">
-<img class="rainbow" src="assets/rainbow.svg" alt="">
-<h1>Happy 8th Birthday, Ellie!</h1>
-</header>
 
-<section id="giftScreen" class="active">
-<img id="gift" src="assets/gift.svg" alt="Gift">
-<p>Tap the gift to unlock your Birthday Adventure!</p>
-</section>
+<div class="overlay">
 
-<section id="choiceScreen" class="hidden">
-<div class="card"><img src="assets/shopping.svg"><h2>$30 Shopping Spree</h2><button onclick="finish('$30 Shopping Spree')">Choose</button></div>
-<div class="card"><img src="assets/craft.svg"><h2>Create Something Together</h2><button onclick="finish('Create Something Together')">Choose</button></div>
-</section>
+    <img class="paw paw-left" src="assets/paw.png" alt="">
+    <img class="paw paw-right" src="assets/paw.png" alt="">
 
-<section id="doneScreen" class="hidden">
-<h1>Adventure Confirmed!</h1>
-<h2 id="choice"></h2>
-<p>I can't wait to spend some special time with you and celebrate your birthday!</p>
-<h3>Have the BEST 8th Birthday, Ellie!</h3>
-<p><strong>Love,<br>Aunt Katie ❤️</strong></p>
-<div class="footer">
-<img src="assets/star.svg"><img src="assets/heart.svg"><img src="assets/pawprint.svg">
+    <!-- Opening Screen -->
+
+    <section id="giftScreen" class="screen active">
+
+        <h1>🎉 Happy 8th Birthday,<br>Ellie! 🎉</h1>
+
+        <p class="subtitle">
+            A birthday surprise is waiting...
+        </p>
+
+        <img
+            id="gift"
+            src="assets/gift.png"
+            alt="Birthday Gift">
+
+        <p class="tap">
+            Tap the gift to unlock your
+            <br>
+            Birthday Adventure!
+        </p>
+
+    </section>
+
+    <!-- Choice Screen -->
+
+    <section id="choiceScreen" class="screen">
+
+        <h1>Choose Your Adventure!</h1>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="emoji">
+                    🛍️
+                </div>
+
+                <h2>$30 Shopping Spree</h2>
+
+                <p>
+                    We'll go shopping together and you can pick
+                    something special up to $30!
+                </p>
+
+                <button onclick="finish('🛍️ $30 Shopping Spree')">
+                    Choose This Adventure
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <div class="emoji">
+                    🎨
+                </div>
+
+                <h2>Create Something Together</h2>
+
+                <p>
+                    Let's make something awesome together like
+                    embroidery, 3D printing,
+                    a custom tumbler,
+                    shirt,
+                    or another fun project!
+                </p>
+
+                <button onclick="finish('🎨 Create Something Together')">
+                    Choose This Adventure
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Final Screen -->
+
+    <section id="doneScreen" class="screen">
+
+        <h1>🎉 Adventure Confirmed! 🎉</h1>
+
+        <h2 id="choice"></h2>
+
+        <p class="message">
+
+            I can't wait to spend some special time
+            with you and celebrate your birthday.
+
+            <br><br>
+
+            Whether we're shopping for something fun
+            or creating something amazing,
+            it's going to be a wonderful adventure!
+
+        </p>
+
+        <h2 class="birthday">
+
+            Have the BEST 8th Birthday,
+            Ellie!
+
+        </h2>
+
+        <p class="love">
+
+            ❤️ Love,
+
+            <br>
+
+            Aunt Katie ❤️
+
+        </p>
+
+        <img
+            class="paw-bottom"
+            src="assets/paw.png"
+            alt="">
+
+    </section>
+
 </div>
-</section>
+
 <script src="script.js"></script>
-</body></html>
+
+</body>
+</html>
