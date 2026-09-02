@@ -1,6 +1,158 @@
-<!doctype html><html><body style="font-family:Arial;text-align:center;padding:60px">
-<h1>Happy Birthday, Ellie!</h1>
-<p>Scan the QR code to unlock your Birthday Adventure.</p>
-<div style="width:220px;height:220px;border:2px dashed #999;margin:30px auto;display:flex;align-items:center;justify-content:center;">QR CODE</div>
-<p><strong>Love,<br>Aunt Katie</strong></p>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ellie's Birthday Coupon</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    font-family:"Baloo 2",sans-serif;
+    background:#ffffff;
+    color:#5b2d82;
+    margin:0;
+    padding:40px;
+}
+
+.coupon{
+
+    max-width:650px;
+
+    margin:auto;
+
+    border:4px dashed #ff4fbf;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+h1{
+
+    font-size:3rem;
+
+    color:#ff4fbf;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    font-size:1.3rem;
+
+    margin-bottom:35px;
+
+}
+
+.qr{
+
+    width:220px;
+
+    margin:20px auto;
+
+}
+
+.instructions{
+
+    font-size:1.2rem;
+
+    margin-top:20px;
+
+}
+
+.signature{
+
+    margin-top:50px;
+
+    font-size:1.4rem;
+
+}
+
+.footer{
+
+    margin-top:30px;
+
+    font-size:1.3rem;
+
+    color:#ff4fbf;
+
+}
+
+@media print{
+
+    body{
+
+        padding:0;
+
+    }
+
+    .coupon{
+
+        border:none;
+
+        box-shadow:none;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="coupon">
+
+<h1>🎉 Happy Birthday, Ellie! 🎉</h1>
+
+<p class="subtitle">
+
+A special Birthday Adventure
+is waiting just for you!
+
+</p>
+
+<img
+    class="qr"
+    src="assets/ellie_birthday_qr.png"
+    alt="Birthday Adventure QR Code">
+
+<p class="instructions">
+
+📱 Scan the QR code to unlock
+your Birthday Adventure!
+
+</p>
+
+<div class="signature">
+
+❤️ Love,
+
+<br><br>
+
+<strong>Aunt Katie</strong>
+
+</div>
+
+<div class="footer">
+
+🌈 ⭐ 💖 🐾 💖 ⭐ 🌈
+
+</div>
+
+</div>
+
+</body>
+</html>
